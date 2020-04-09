@@ -1,0 +1,20 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "Default project starter using ReactJS and GatsbyJS",
+  "main": "index.js",
+  "author": "Daniel Van Cuylenburg",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "gatsby develop -H 0.0.0.0",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.20.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

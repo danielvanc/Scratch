@@ -8,13 +8,22 @@
   "private": false,
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build"
   },
   "dependencies": {
-    "gatsby": "^2.20.15",
+    "gatsby": "^2.20.24",
+    "gatsby-cli": "^2.11.10",
+    "gatsby-plugin-manifest": "^2.3.5",
+    "gatsby-plugin-offline": "^3.1.4",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-sharp": "^2.4.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0"
   }
 }

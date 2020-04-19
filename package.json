@@ -12,11 +12,14 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
-    "test" : "jest --watch"
+    "test": "jest --watch",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open"
   },
   "dependencies": {
     "babel-jest": "^25.3.0",
     "babel-preset-gatsby": "^0.3.3",
+    "cypress": "^4.4.0",
     "gatsby": "^2.20.24",
     "gatsby-cli": "^2.11.10",
     "gatsby-plugin-manifest": "^2.3.5",
@@ -30,6 +33,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "start-server-and-test": "^1.11.0"
   }
 }

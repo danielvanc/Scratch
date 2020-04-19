@@ -9,7 +9,9 @@ module.exports = {
   testPathIgnorePatterns: [
     `node_modules`,
     `\\.cache`,
+    `.cache`,
     `<rootDir>.*/public`,
+    `cypress`,
   ],
   transformIgnorePatterns: [
     `node_modules/(?!(gatsby)/)`,

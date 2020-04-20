@@ -6,7 +6,7 @@ module.exports = {
     `react-app`,
     `plugin:jsx-a11y/recommended`,
   ],
-  plugins: ['jsx-a11y'],
+  plugins: ['jsx-a11y', 'jest'],
   rules: {
     'jsx-a11y/accessible-emoji': `warn`,
     'jsx-a11y/alt-text': `warn`,

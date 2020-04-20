@@ -44,6 +44,7 @@
     "eslint-config-react-app": "^5.2.1",
     "eslint-loader": "^4.0.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-jest": "^23.8.2",
     "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",

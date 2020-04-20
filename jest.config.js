@@ -1,6 +1,6 @@
 module.exports = {
   transform: {
-    '^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`,
+    '^.+\\.jsx?$': `<rootDir>/jest/jest-preprocess.js`,
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
@@ -11,7 +11,7 @@ module.exports = {
     `\\.cache`,
     `.cache`,
     `<rootDir>.*/public`,
-    `cypress`,
+    `e2e-tests/tests`,
   ],
   transformIgnorePatterns: [
     `node_modules/(?!(gatsby)/)`,
@@ -21,6 +21,6 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [
-    `<rootDir>/loadershim.js`,
+    `<rootDir>/jest/loadershim.js`,
   ],
 };

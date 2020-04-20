@@ -1,5 +1,6 @@
 # Scratch 🛠
 
-My default Project Starter that uses React and GatsbyJS.
+My default Project Starter that uses
+React and GatsbyJS.
 
-Will add more here later
+Further info to be added soon.

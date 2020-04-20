@@ -17,11 +17,6 @@
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "gatsby": "^2.20.24",
     "gatsby-cli": "^2.11.10",

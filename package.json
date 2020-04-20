@@ -15,7 +15,9 @@
     "test": "jest --watchAll",
     "test:cov": "jest --watchAll --collectCoverage",
     "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open"
+    "cy:open:firefox": "cypress open --browser firefox",
+    "test:e2e:chrome": "start-server-and-test dev http://localhost:8000 cy:open",
+    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open:firefox"
   },
   "dependencies": {
     "gatsby": "^2.20.24",
@@ -41,6 +43,7 @@
     "eslint": "^6.8.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-loader": "^4.0.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",

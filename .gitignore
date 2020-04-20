@@ -9,6 +9,7 @@ yarn-error.log
 .netlify
 
 cypress/integration/examples
+e2e-tests/tests/examples
 
 logs
 *.log

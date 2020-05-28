@@ -6,8 +6,20 @@ module.exports = {
     `react-app`,
     `plugin:jsx-a11y/recommended`,
   ],
-  plugins: ['jsx-a11y', 'jest'],
+  plugins: [
+    'jsx-a11y',
+    'jest',
+    'cypress',
+  ],
   rules: {
+    'cypress/no-assigning-return-values':
+      'error',
+    'cypress/no-unnecessary-waiting':
+      'error',
+    'cypress/assertion-before-screenshot':
+      'warn',
+    'cypress/no-force': 'warn',
+    'cypress/no-async-tests': 'error',
     'jsx-a11y/accessible-emoji': `warn`,
     'jsx-a11y/alt-text': `warn`,
     'jsx-a11y/anchor-has-content': `warn`,

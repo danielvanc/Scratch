@@ -12,12 +12,6 @@ module.exports = {
     'cypress',
   ],
   rules: {
-    'cypress/no-assigning-return-values':
-      'error',
-    'cypress/no-unnecessary-waiting':
-      'error',
-    'cypress/assertion-before-screenshot':
-      'warn',
     'cypress/no-force': 'warn',
     'cypress/no-async-tests': 'error',
     'jsx-a11y/accessible-emoji': `warn`,

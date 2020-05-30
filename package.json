@@ -51,6 +51,7 @@
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-jest": "^23.8.2",
     "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.3.0",

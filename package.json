@@ -17,6 +17,7 @@
     "prettier:format": "yarn prettier --write",
     "prettier:check": "yarn prettier --list-different",
     "validate": "npm-run-all --parallel prettier:check lint build",
+    "jest": "jest",
     "test": "jest --watchAll",
     "test:cov": "jest --watchAll --collectCoverage",
     "cy:open": "cypress open",

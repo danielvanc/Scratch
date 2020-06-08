@@ -17,17 +17,20 @@
     "prettier:format": "yarn prettier --write",
     "prettier:check": "yarn prettier --list-different",
     "validate": "npm-run-all --parallel prettier:check lint build",
-    "jest": "jest",
-    "test": "jest --watchAll",
-    "test:cov": "jest --watchAll --collectCoverage",
-    "cy:open": "cypress open",
-    "cy:open:firefox": "cypress open --browser firefox",
-    "test:e2e:chrome": "start-server-and-test dev http://localhost:8000 cy:open",
-    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open:firefox"
+    "jestconf": "jest --watchAll --config tests/configs/jest.config.js",
+    "jest": "jest --config tests/configs/jest.config.js",
+    "jest:watch": "yarn jestconf",
+    "jest:watch:cov": "yarn jestconf --collectCoverage ",
+    "cypress:open": "cypress open --config-file tests/configs/cypress.json",
+    "cypress:open:firefox": "cypress open --browser firefox --config-file tests/configs/cypress.json",
+    "cypress:open:all": "start-server-and-test dev http://localhost:8000 cypress:open --config-file tests/configs/cypress.json",
+    "cypress:run": "cypress run --config-file tests/configs/cypress.json",
+    "cypress:run:all": "start-server-and-test dev http://localhost:8000 cypress:run --config-file tests/configs/cypress.json",
+    "cypress:run:all:firefox": "start-server-and-test dev http://localhost:8000 cypress:open:firefox --config-file tests/configs/cypress.json"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn prettier:check && yarn jest"
     }
   },
   "dependencies": {

@@ -23,4 +23,4 @@ coverage/
 
 # cypress
 # tests/e2e/integration/examples
-e2e-tests/tests/examples
+tests/e2e/integrations/examples/

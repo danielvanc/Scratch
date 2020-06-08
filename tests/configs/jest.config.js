@@ -1,17 +1,21 @@
 module.exports = {
+  roots: ['../unit/'],
+  testMatch: [
+    '**/tests/unit/?(*.)+(spec|test).[jt]s?(x)',
+  ],
   transform: {
-    '^.+\\.jsx?$': `<rootDir>/jest/jest-preprocess.js`,
+    '^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`,
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
-    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/jest/file-mock.js`,
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/file-mock.js`,
   },
   testPathIgnorePatterns: [
     `node_modules`,
     `\\.cache`,
     `.cache`,
     `<rootDir>.*/public`,
-    `e2e-tests/tests`,
+    `tests/e2e/tests`,
   ],
   transformIgnorePatterns: [
     `node_modules/(?!(gatsby)/)`,
@@ -21,6 +25,6 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [
-    `<rootDir>/jest/loadershim.js`,
+    `<rootDir>/loadershim.js`,
   ],
 };

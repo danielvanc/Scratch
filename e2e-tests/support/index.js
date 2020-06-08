@@ -21,5 +21,6 @@ import 'cypress-axe';
 // require('./commands')
 
 beforeEach(() => {
-  cy.visit('/').injectAxe();
+  cy.visit('/');
+  cy.injectAxe();
 });

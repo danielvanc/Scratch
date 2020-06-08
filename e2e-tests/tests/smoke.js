@@ -1,6 +1,5 @@
 describe('app', () => {
   it('works', () => {
-    cy.visit('/');
-    cy.checkAlly();
+    cy.checkA11y();
   });
 });

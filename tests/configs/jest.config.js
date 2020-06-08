@@ -15,7 +15,7 @@ module.exports = {
     `\\.cache`,
     `.cache`,
     `<rootDir>.*/public`,
-    `tests/e2e/tests`,
+    `tests/e2e/integrations`,
   ],
   transformIgnorePatterns: [
     `node_modules/(?!(gatsby)/)`,

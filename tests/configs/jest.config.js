@@ -1,14 +1,14 @@
 module.exports = {
-  roots: ['../unit/'],
+  rootDir: '../../',
   testMatch: [
     '**/tests/unit/?(*.)+(spec|test).[jt]s?(x)',
   ],
   transform: {
-    '^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`,
+    '^.+\\.jsx?$': `<rootDir>/tests/configs/jest-preprocess.js`,
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
-    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/file-mock.js`,
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/tests/configs/file-mock.js`,
   },
   testPathIgnorePatterns: [
     `node_modules`,
@@ -25,6 +25,12 @@ module.exports = {
   },
   testURL: `http://localhost`,
   setupFiles: [
-    `<rootDir>/loadershim.js`,
+    `<rootDir>/tests/configs/loadershim.js`,
+  ],
+  coverageDirectory:
+    '<rootDir>/tests/coverage',
+  collectCoverageFrom: [
+    '<rootDir>/src/pages/**/*.{js,jsx}',
+    '<rootDir>/src/components/**/*.{js,jsx}',
   ],
 };

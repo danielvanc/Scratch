@@ -2,7 +2,7 @@ node_modules
 .env
 
 .cache/
-public
+public/
 yarn-error.log
 .DS_Store
 .vscode/
@@ -20,3 +20,7 @@ yarn-error.log*
 .now
 
 coverage/
+
+# cypress
+# tests/e2e/integration/examples
+tests/e2e/integrations/examples/

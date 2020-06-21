@@ -9,20 +9,28 @@
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby clean && gatsby build && gatsby serve",
+    "build": "gatsby clean && gatsby build",
     "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
-    "test": "jest --watchAll",
-    "test:cov": "jest --watchAll --collectCoverage",
-    "cy:open": "cypress open",
-    "cy:open:firefox": "cypress open --browser firefox",
-    "test:e2e:chrome": "start-server-and-test dev http://localhost:8000 cy:open",
-    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open:firefox",
-    "validate": "npm-run-all --parallel prettier:check lint build"
+    "lint": "eslint --ignore-path .gitignore .",
+    "prettier": "prettier \"**/src/**/*.+(js|json|jsx)\"",
+    "prettier:format": "yarn prettier --write",
+    "prettier:check": "yarn prettier --list-different",
+    "validate": "npm-run-all --parallel prettier:check lint build",
+    "jestconf": "jest --watchAll --config tests/configs/jest.config.js",
+    "jest": "jest --config tests/configs/jest.config.js",
+    "jest:watch": "yarn jestconf",
+    "jest:watch:cov": "yarn jestconf --collectCoverage ",
+    "cypress:open": "cypress open --config-file tests/configs/cypress.json",
+    "cypress:open:firefox": "cypress open --browser firefox --config-file tests/configs/cypress.json",
+    "cypress:open:all": "start-server-and-test dev http://localhost:8000 cypress:open --config-file tests/configs/cypress.json",
+    "cypress:run": "cypress run --config-file tests/configs/cypress.json",
+    "cypress:run:all": "start-server-and-test dev http://localhost:8000 cypress:run --config-file tests/configs/cypress.json",
+    "cypress:run:all:firefox": "start-server-and-test dev http://localhost:8000 cypress:open:firefox --config-file tests/configs/cypress.json"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn prettier:check && yarn jest"
     }
   },
   "dependencies": {
@@ -45,11 +53,14 @@
     "babel-jest": "^25.3.0",
     "babel-preset-gatsby": "^0.3.3",
     "cypress": "^4.4.0",
+    "cypress-axe": "^0.8.1",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-loader": "^4.0.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "husky": "^4.2.5",

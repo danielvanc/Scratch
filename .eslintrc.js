@@ -5,6 +5,7 @@ module.exports = {
   extends: [
     `react-app`,
     `plugin:jsx-a11y/recommended`,
+    `eslint-config-prettier`,
   ],
   plugins: [
     'jsx-a11y',
